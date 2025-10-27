@@ -6,6 +6,7 @@ import java.util.List;
 
 public class UserInput {
 
+    //결주할 자동차 이름을 쉼표(,) 기준을 입력받는다.
     public List<String> readCarNames() {
         System.out.println("경주할 자동차 이름을 입력하세요. (이름은 쉼표(,)로 구분)");
         String input = Console.readLine().trim();
@@ -21,6 +22,7 @@ public class UserInput {
         return names;
     }
 
+    //이동 횟수를 입력받는다.
     public int readRoundCount() {
         System.out.println("시도할 횟수를 입력하세요.");
         String input = Console.readLine().trim();

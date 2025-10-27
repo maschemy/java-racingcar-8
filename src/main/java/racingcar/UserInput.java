@@ -20,4 +20,18 @@ public class UserInput {
         }
         return names;
     }
+
+    public int readRoundCount() {
+        System.out.println("시도할 횟수를 입력하세요.");
+        String input = Console.readLine().trim();
+        try {
+            int count = Integer.parseInt(input);
+            if (count <= 0) {
+                throw new IllegalArgumentException("시도 횟수는 1 이상이어야 합니다.");
+            }
+            return count;
+        } catch (NumberFormatException e) {
+            throw new IllegalArgumentException("숫자를 입력해야 합니다.");
+        }
+    }
 }
